@@ -9,6 +9,7 @@ Based on the document, the identified actors are:
 4. Assistants
 5. University (for program review and adjustments)
 6. IT-Department (developers)
+7. Database
 
 ### Identify 20 use cases.
 1. Students enroll in a program.
@@ -60,6 +61,9 @@ Based on the document, the identified actors are:
 6. **IT-Department**:
    - Develop and maintain the platform.
    - Create and manage statistical reports.
+     
+7. **Database**
+   - Securely store data
 
 ### Goals for each actor linked to use cases.
 1. **Students**:
@@ -89,3 +93,5 @@ Based on the document, the identified actors are:
 6. **IT-Department**:
    - Create and manage statistical reports (Use Cases: 18, 19).
 
+7. **Database**
+   - Securely store data
