@@ -95,3 +95,16 @@ Based on the document, the identified actors are:
 
 7. **Database**
    - Securely store data
+
+### Scenarios
+| Student enrolls in a program |  |
+| --- | --- |
+| **Audience** | System development team |
+| **Level** | Specific functionality |
+| **Granularity** | Detailed |
+| **Preconditions** | Student has an account on the platform. There is an administrative aid linked to each program to process enrollments. |
+| **Success condition** | Student is enrolled in the program they chose and enrollment is send to the correct administrative aid. If the deadline has passed, there should have been approval from an administrative aid |
+| **Fail condition** | Student can enroll in a program after the deadline without approval from a administrative aid. Student cannot enroll in a program before the deadline. An enrollment is not send or send to the wrong administrative aid. Administrative aid cannot give approval for late enrollments. |
+| **Primary actors** | Student |
+| **Secondary actors** | Administrative aids |
+| **Trigger** | Student enrolls |
