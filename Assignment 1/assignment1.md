@@ -87,6 +87,5 @@ Based on the document, the identified actors are:
    - Require statistical reports for decision making (Use Case: 18).
    
 6. **IT-Department**:
-   - Develop and maintain the platform (Implied from text).
    - Create and manage statistical reports (Use Cases: 18, 19).
 
