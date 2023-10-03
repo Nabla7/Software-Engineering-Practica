@@ -96,6 +96,9 @@ Based on the document, the identified actors are:
 7. **Database**
    - Securely store data
 
+### Use case diagram
+![Diagram](IMG_0325.jpg)
+
 ### Scenarios
 | Student enrolls in a program |  |
 | --- | --- |
