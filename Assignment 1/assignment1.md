@@ -108,3 +108,16 @@ Based on the document, the identified actors are:
 | **Primary actors** | Student |
 | **Secondary actors** | Administrative aids |
 | **Trigger** | Student enrolls |
+
+
+| **Plagiarism detection on student assignments** ||
+| --- | --- |
+| **Audience** | System development team |
+| **Level** | Specific Functionality |
+| **Granularity** | Detailed |
+| **Preconditions** | Assignments have been submitted and the deadline is closed |
+| **Succes condition** | The plagiarism detection program runs after the deadline and checks the chance the student committed plagiarism|
+| **Fail condition** | The plagiarism detection software fails to find if a student has committed plagiarism |
+| **Primary actors** | Professor, assistant |
+| **Secondary actors** | |
+| **Trigger** |The deadline of an assignment has passed |
