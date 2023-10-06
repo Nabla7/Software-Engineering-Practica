@@ -126,7 +126,7 @@ Based on the document, the identified actors are:
 | **Trigger** |The deadline of an assignment has passed |
 
 
-## Step by step description of execution of Plagiarism detection on student assignments
+### Step by step description of execution of Plagiarism detection on student assignments
 | Step | Action |
 | --- | --- |
 | 1 | Deadline of an assignment has passed |
@@ -140,4 +140,23 @@ Based on the document, the identified actors are:
 | Any | If the system fails or crashes it should notify the software devolpment team with an error log |
 | After 2 | If there are no submissions, the system should stop running |
 
+
+
+## User story cards
+
+### Plagiarism detection
+   *As a professor I want all the assignments to be checked by plagiarism detection software and a report of it attached to the assignment. This way academic integrity is ensured.*
+#### INVEST criteria
+1. I: Independent: 
+    This story does not mention/depend on any other story
+2. N: Negotiable:
+    There isnt a lot of detail of how/when the software should run. 
+3. V: Value:
+    The story specifies the value: academic integrity 
+4. E: Estimable:
+    It's clear what has to be done
+5. S: Small:
+    The story describes a single functionality
+6. T: Testable:
+    We can easily define acceptance criteria for this user story.
  
