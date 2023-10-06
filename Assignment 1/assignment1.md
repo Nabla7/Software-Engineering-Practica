@@ -124,3 +124,20 @@ Based on the document, the identified actors are:
 | **Primary actors** | Professor, assistant |
 | **Secondary actors** | |
 | **Trigger** |The deadline of an assignment has passed |
+
+
+## Step by step description of execution of Plagiarism detection on student assignments
+| Step | Action |
+| --- | --- |
+| 1 | Deadline of an assignment has passed |
+| 2 | The system retrieves the submitted assignments from the server |
+| 3 | For each assignment that is returned from the server : |
+| 3.1 | The system calculates the similarity scores and adds it to the plagiarism report |
+| 3.2 | If the systems find a similarity above a certain threshold it flags the assignment |
+| 4 | The system generates a plagiarism report and attaches it to the assignments |
+| 5 | The system notifies the professor / teaching assistant of the flagged assignments |
+| **Branch** | Exceptions |
+| Any | If the system fails or crashes it should notify the software devolpment team with an error log |
+| After 2 | If there are no submissions, the system should stop running |
+
+ 
