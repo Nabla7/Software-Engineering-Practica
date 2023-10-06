@@ -160,3 +160,6 @@ Based on the document, the identified actors are:
 6. T: Testable:
     We can easily define acceptance criteria for this user story.
  
+ ## Questions for the customer:
+* From what grade of similarity with outside sources should assignments be flagged as "potentially plagiarized"
+* Do we use this system to ask approval of the administrative aid when a student is late for enrollment, or is this a completely different system?
