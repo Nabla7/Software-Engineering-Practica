@@ -1,6 +1,6 @@
 # Part 1
 
-### Identify all actors.
+### 1: Identify all actors.
 
 Based on the document, the identified actors are:
 1. Students
@@ -11,7 +11,7 @@ Based on the document, the identified actors are:
 6. IT-Department (developers)
 7. Database
 
-### Identify 20 use cases.
+### 2: Identify 20 use cases.
 1. Students enroll in a program.
 2. Students enroll in courses.
 3. Administrative Aids process enrollment applications.
@@ -33,7 +33,7 @@ Based on the document, the identified actors are:
 19. IT-Department adds new types of reports.
 20. Data securely stored and managed.
 
-### Responsibilities for each actor.
+### 3: Responsibilities for each actor.
 1. **Students**: 
    - Enroll in programs and courses.
    - Pay tuition.
@@ -65,7 +65,7 @@ Based on the document, the identified actors are:
 7. **Database**
    - Securely store data
 
-### Goals for each actor linked to use cases.
+### 4: Goals for each actor linked to use cases.
 1. **Students**:
    - Enroll in programs and courses (Use Cases: 1, 2).
    - Pay tuition (Use Case: 5).
@@ -96,10 +96,12 @@ Based on the document, the identified actors are:
 7. **Database**
    - Securely store data
 
-### Use case diagram
+### 5: Use case diagram
 ![Diagram](IMG_0325.jpg)
 
-### Scenarios
+
+# Part 2
+### 1: Scenarios
 | Student enrolls in a program |  |
 | --- | --- |
 | **Audience** | System development team |
@@ -126,7 +128,7 @@ Based on the document, the identified actors are:
 | **Trigger** |The deadline of an assignment has passed |
 
 
-### Step by step description of execution of Plagiarism detection on student assignments
+### 2: Step by step description of execution of Plagiarism detection on student assignments
 | Step | Action |
 | --- | --- |
 | 1 | Deadline of an assignment has passed |
@@ -142,23 +144,88 @@ Based on the document, the identified actors are:
 
 
 
-## User story cards
+# Part 3 :  User story cards
 
-### Plagiarism detection
-   *As a professor I want all the assignments to be checked by plagiarism detection software and a report of it attached to the assignment. This way academic integrity is ensured.*
-#### INVEST criteria
-1. I: Independent: 
-    This story does not mention/depend on any other story
-2. N: Negotiable:
-    There isnt a lot of detail of how/when the software should run. 
-3. V: Value:
-    The story specifies the value: academic integrity 
-4. E: Estimable:
-    It's clear what has to be done
-5. S: Small:
-    The story describes a single functionality
-6. T: Testable:
-    We can easily define acceptance criteria for this user story.
+### **INVEST Criteria**
+
+The INVEST criteria help in ensuring that each user story in a product backlog is well-constructed:
+
+- **I: Independent**: Each story can be developed, tested, and deployed independently.
+- **N: Negotiable**: The story provides high-level requirements, allowing room for discussions between stakeholders and the development team.
+- **V: Value**: Each story offers clear value to its actor.
+- **E: Estimable**: Given the clear requirements, the development team can estimate the effort for the story.
+- **S: Small**: Each story is focused on a specific functionality.
+- **T: Testable**: Acceptance criteria are provided for each story, allowing for test case creation.
+
+---
+
+### **User Story 1: Plagiarism Detection**
+
+**Title**: Plagiarism Detection on Student Assignments
+
+**Story**: 
+*As a professor, I want all the assignments to be checked by plagiarism detection software and a report of it attached to the assignment so that academic integrity is ensured.*
+
+**Acceptance Criteria**:
+1. The system should automatically run the plagiarism check after the assignment deadline.
+2. The system should generate a plagiarism report for each assignment.
+3. Assignments with similarity scores above a certain threshold should be flagged.
+4. Professors/assistants should be notified of the flagged assignments.
+
+**INVEST Analysis**:
+- **I**: This story focuses solely on plagiarism detection, making it independent from other functionalities.
+- **N**: It provides a high-level goal without specifying the methods, leaving room for negotiation.
+- **V**: Ensuring academic integrity provides clear value.
+- **E**: The tasks required are clear enough to provide estimations.
+- **S**: The story is dedicated to one functionality: plagiarism detection.
+- **T**: Given the acceptance criteria, tests can be designed to validate the story.
+
+---
+
+### **User Story 2: Administrators Processing Enrollments**
+
+**Title**: Processing Student Enrollments
+
+**Story**: 
+*As an administrative aid, I want to be able to process student enrollments so that students can be formally admitted into their desired programs and courses.*
+
+**Acceptance Criteria**:
+1. The system should allow administrative aids to view pending enrollments.
+2. Administrative aids should have the capability to approve or decline enrollments.
+3. The system should notify students of their enrollment status once processed.
+4. Administrative aids should be able to process late enrollments with special approval.
+
+**INVEST Analysis**:
+- **I**: This story is focused on enrollment processing, independent of other functionalities.
+- **N**: The story gives an overarching goal, leaving implementation details open to negotiation.
+- **V**: Efficiently processing enrollments provides value to both administrative aids and students.
+- **E**: The tasks mentioned allow for an estimation of effort.
+- **S**: The story exclusively addresses enrollment processing.
+- **T**: With clear acceptance criteria, tests can be developed to ensure functionality.
+
+---
+
+### **User Story 3: Student Tuition Payment**
+
+**Title**: Paying Tuition Fees
+
+**Story**: 
+*As a student, I want to be able to pay my tuition fees through the platform so that I can secure my enrollment and access the courses I've registered for.*
+
+**Acceptance Criteria**:
+1. The system should display the due tuition amount for the student.
+2. The system should provide secure payment options (credit card, bank transfer, etc.).
+3. Upon successful payment, the system should provide a digital receipt to the student.
+4. In case of payment failure, the system should notify the student and suggest retrying.
+
+**INVEST Analysis**:
+- **I**: This story specifically deals with tuition payment, independent from other stories.
+- **N**: It outlines the need without delving into precise methods, allowing for negotiation.
+- **V**: Ensuring a smooth tuition payment process is valuable for both students and the institution.
+- **E**: The requirements are clear enough for the team to estimate effort.
+- **S**: The story is centered on the tuition payment process.
+- **T**: The acceptance criteria enable the creation of comprehensive tests. 
+
  
  ## Questions for the customer:
 * From what grade of similarity with outside sources should assignments be flagged as "potentially plagiarized"
