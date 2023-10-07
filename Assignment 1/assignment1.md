@@ -298,7 +298,15 @@ The INVEST criteria help in ensuring that each user story in a product backlog i
 - **S**: The story is centered on the tuition payment process.
 - **T**: The acceptance criteria enable the creation of comprehensive tests. 
 
- 
- ## Questions for the customer:
-* From what grade of similarity with outside sources should assignments be flagged as "potentially plagiarized"
-* Do we use this system to ask approval of the administrative aid when a student is late for enrollment, or is this a completely different system?
+ ---
+# Part 4 : Questions for the Customer
+
+1. **From what grade of similarity with outside sources should assignments be flagged as "potentially plagiarized"?**
+2. **Do we use this system to ask approval of the administrative aid when a student is late for enrollment, or is this a completely different system?**
+3. **Are there specific platforms or software you want to integrate with for the plagiarism detection feature?**
+4. **How should the system handle students who fail to pay their tuition by the due date?**
+5. **What specific functionalities would you want in the statistical reports for the university's decision-making processes?**
+6. **For the digital calendar synchronization, are there specific calendar platforms (e.g., Google Calendar, Outlook) that should be prioritized?**
+7. **Do professors and assistants need any special privileges or functionalities in the system that haven't been mentioned yet?**
+8. **Is there a specific payment gateway or method you prefer for tuition payments?**
+9. **How should the system handle data backups and recovery in case of unforeseen events or crashes?**
