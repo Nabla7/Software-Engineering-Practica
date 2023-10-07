@@ -99,51 +99,123 @@ Based on the document, the identified actors are:
 ### 5: Use case diagram
 ![Diagram](IMG_0325.jpg)
 
-
+---
 # Part 2
+
 ### 1: Scenarios
-| Student enrolls in a program |  |
+
+#### **Student Enrolls in a Program**
+
+| Criteria | Description |
 | --- | --- |
 | **Audience** | System development team |
 | **Level** | Specific functionality |
 | **Granularity** | Detailed |
-| **Preconditions** | Student has an account on the platform. There is an administrative aid linked to each program to process enrollments. |
-| **Success condition** | Student is enrolled in the program they chose and enrollment is send to the correct administrative aid. If the deadline has passed, there should have been approval from an administrative aid |
-| **Fail condition** | Student can enroll in a program after the deadline without approval from a administrative aid. Student cannot enroll in a program before the deadline. An enrollment is not send or send to the wrong administrative aid. Administrative aid cannot give approval for late enrollments. |
+| **Preconditions** | Student has an account on the platform. An administrative aid is linked to each program to process enrollments. |
+| **Success condition** | Student is enrolled in the chosen program and enrollment is sent to the correct administrative aid. If the deadline has passed, there should have been approval from an administrative aid. |
+| **Fail condition** | Student can enroll in a program after the deadline without approval from an administrative aid or cannot enroll before the deadline. Enrollment is not sent or sent to the wrong administrative aid. Administrative aid cannot give approval for late enrollments. |
 | **Primary actors** | Student |
 | **Secondary actors** | Administrative aids |
-| **Trigger** | Student enrolls |
+| **Trigger** | Student initiates enrollment |
 
+---
 
-| **Plagiarism detection on student assignments** ||
+#### **Plagiarism Detection on Student Assignments**
+
+| Criteria | Description |
 | --- | --- |
 | **Audience** | System development team |
 | **Level** | Specific Functionality |
 | **Granularity** | Detailed |
-| **Preconditions** | Assignments have been submitted and the deadline is closed |
-| **Succes condition** | The plagiarism detection program runs after the deadline and checks the chance the student committed plagiarism|
-| **Fail condition** | The plagiarism detection software fails to find if a student has committed plagiarism |
-| **Primary actors** | Professor, assistant |
-| **Secondary actors** | |
-| **Trigger** |The deadline of an assignment has passed |
+| **Preconditions** | Assignments have been submitted, and the deadline has closed. |
+| **Success condition** | The plagiarism detection program runs after the deadline and checks the chance the student committed plagiarism. |
+| **Fail condition** | The plagiarism detection software fails to identify if a student has committed plagiarism. |
+| **Primary actors** | Professor, Assistant |
+| **Secondary actors** | None |
+| **Trigger** | The assignment deadline has passed |
 
+---
 
-### 2: Step by step description of execution of Plagiarism detection on student assignments
+#### **Student Pays Tuition**
+
+| Criteria | Description |
+| --- | --- |
+| **Audience** | System development team |
+| **Level** | Specific Functionality |
+| **Granularity** | Detailed |
+| **Preconditions** | Student has an account on the platform and has a due tuition amount. |
+| **Success condition** | Student successfully pays the tuition through the platform and receives a digital receipt. |
+| **Fail condition** | Payment process fails or student does not receive a receipt. |
+| **Primary actors** | Student |
+| **Secondary actors** | System's payment gateway |
+| **Trigger** | Student initiates payment |
+
+---
+
+### 2: Step by Step Description
+
+---
+
+#### **Student Enrolls in a Program**
+
 | Step | Action |
 | --- | --- |
-| 1 | Deadline of an assignment has passed |
-| 2 | The system retrieves the submitted assignments from the server |
-| 3 | For each assignment that is returned from the server : |
-| 3.1 | The system calculates the similarity scores and adds it to the plagiarism report |
-| 3.2 | If the systems find a similarity above a certain threshold it flags the assignment |
-| 4 | The system generates a plagiarism report and attaches it to the assignments |
-| 5 | The system notifies the professor / teaching assistant of the flagged assignments |
-| **Branch** | Exceptions |
-| Any | If the system fails or crashes it should notify the software devolpment team with an error log |
-| After 2 | If there are no submissions, the system should stop running |
+| 1 | Student logs into the platform. |
+| 2 | Student navigates to the enrollment section. |
+| 3 | The system displays a list of available programs and courses. |
+| 4 | Student selects the desired program or course for enrollment. |
+| 5 | The system prompts the student to confirm their choice and provide any additional required information. |
+| 6 | Student confirms the enrollment choice and submits the enrollment application. |
+| 7 | The system forwards the enrollment application to the linked administrative aid for processing. |
+| 8 | Administrative aid reviews the enrollment application. |
+| 9 | If enrollment is within the deadline or has special approval for late enrollment, the administrative aid approves the enrollment. |
+| 10 | The system updates the student's profile to reflect the new enrollment status. |
+| 11 | The system sends a notification to the student confirming the successful enrollment. |
+
+**Branch (Exceptions)**:
+- At step 9: If the student tries to enroll after the deadline without special approval, the administrative aid declines the enrollment. The system sends a notification to the student about the declined enrollment.
+- At any step: If there is a system error or crash, the student receives a notification about the issue, and the error is logged for the IT department.
+
+---
+
+This step-by-step description provides a detailed sequence of actions for the enrollment process, from the student's perspective and the system's response, including potential exceptions.
+
+#### **Plagiarism Detection on Student Assignments**
+
+| Step | Action |
+| --- | --- |
+| 1 | The assignment deadline passes. |
+| 2 | The system retrieves the submitted assignments from the server. |
+| 3 | For each retrieved assignment: |
+| 3.1 | The system calculates the similarity scores and adds them to the plagiarism report. |
+| 3.2 | If the system identifies a similarity above a certain threshold, it flags the assignment. |
+| 4 | The system generates a plagiarism report and attaches it to the assignments. |
+| 5 | The system notifies the professor/teaching assistant of flagged assignments. |
+
+**Branch (Exceptions)**:
+- At any step: If the system crashes or fails, it should notify the software development team with an error log.
+- After step 2: If there are no submissions, the system should stop running.
+
+---
+
+#### **Student Pays Tuition**
+
+| Step | Action |
+| --- | --- |
+| 1 | Student logs in and navigates to the tuition payment section. |
+| 2 | The system displays the due tuition amount. |
+| 3 | Student selects a payment method (e.g., credit card, bank transfer). |
+| 4 | Student enters payment details and confirms the payment. |
+| 5 | The system processes the payment through the selected payment gateway. |
+| 6 | Upon successful payment, the system generates and provides a digital receipt to the student. |
+
+**Branch (Exceptions)**:
+- At step 5: If the payment fails, the system notifies the student and suggests retrying or choosing a different payment method.
+- At step 6: If the system fails to generate a receipt, the student is notified, and the issue is logged for the IT department.
 
 
 
+---
 # Part 3 :  User story cards
 
 ### **INVEST Criteria**
