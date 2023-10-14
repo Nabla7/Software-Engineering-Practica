@@ -35,3 +35,21 @@
 | Aspect of the architecture | Non-functional requirements | Functionality |
 |---|---|---|
 | Knowledge sources | Providing accurate enrolment suggestions | Suggestions for program enrollment (easy access to different AI) |
+
+
+# Single Access Point
+| Component | Part of the project |
+|---|---|
+| Single Access Point | Grading (dont let students modify their grades, only view them) |
+| Single Access Point | Dont let students make course announcements |
+| Single Acces Point | Course access: only let students view the courses for which they are enrolled|
+
+| Advantage | Disadvantage|
+|---|---|
+| Simplicity: only having one access point improves simplicity | Scalability: only having one access point doesnt help with scalability |
+| Easy control for access | Security vulnerability: if one point fails, its easy to hack in the system |
+| Easy installation | Reliability: if the single point fails, entire system can go down |
+
+| Aspect of the architecture | Non-functional requirements | Functionality |
+|---|---|---|
+| Single acces point | / | Only professors can upload course material, ... |
