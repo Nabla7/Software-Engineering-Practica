@@ -53,3 +53,20 @@
 | Aspect of the architecture | Non-functional requirements | Functionality |
 |---|---|---|
 | Single acces point | / | Only professors can upload course material, ... |
+
+# Microservice
+| Component | Part of the project |
+|---|---|
+| Multiple Acces Points | Flexible and scalable access for students |
+|  |  |
+
+| Advantage | Disadvantage|
+|---|---|
+| Most access is read access | Lots of data sharing between access points |
+| Easily scalable during peak traffic | Updates can take time to reach all systems when traffic is high |
+| Easily reroute traffic when one access point is down |  |
+
+| Aspect of the architecture | Non-functional requirements | Functionality |
+|---|---|---|
+| Multiple access points | Scalability of streaming infrastructure | Divide the load of multiple downloads at the same time by students, professors... |
+| Distributes systems | Computing power is divided and easily assignable to lots of departments | Streaming can get it's own system to guaranty 99.99% uptime |
