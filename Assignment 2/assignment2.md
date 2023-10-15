@@ -70,3 +70,31 @@
 |---|---|---|
 | Multiple access points | Scalability of streaming infrastructure | Divide the load of multiple downloads at the same time by students, professors... |
 | Distributes systems | Computing power is divided and easily assignable to lots of departments | Streaming can get it's own system to guaranty 99.99% uptime |
+
+# Spike Stories
+
+### Spike Story 1: Microservice Architecture for Streaming Infrastructure
+
+**Spike:**  
+_As a Software Architect, I want to investigate the feasibility and effectiveness of employing a microservice architecture for the streaming infrastructure to effectively scale the system to support fluctuating viewership numbers and guarantee a 99.99% uptime._
+
+**Conditions of Satisfaction:**  
+
+- The microservice should automatically scale to accommodate at least a tenfold increase in simultaneous viewers without degradation in video quality or increased latency.
+- The system should recover from a service failure (one microservice going down) in less than 60 seconds to maintain the 99.99% uptime requirement.
+- Integration with the main system is seamless, with no noticeable delays for the end-users.
+- Video quality of at least 720p is consistently maintained.
+
+---
+
+### Spike Story 2: 3-Layer Architecture for Database Layer's Security and Reliability 
+
+**Spike:**  
+_As a Software Architect, I want to evaluate the 3-layer architecture's capabilities for the database layer to ensure scores, assignments, and exams are stored securely and reliably up until 10 years after graduation._
+
+**Conditions of Satisfaction:**  
+
+- The system should provide robust access controls, preventing any unauthorized access or data breaches.
+- Data integrity is maintained with no loss or corruption of data over simulated long periods.
+- The performance overhead for standard database operations should be within acceptable limits (e.g., less than a 10% increase in response time).
+- GDPR requirements, such as the right to access, right to deletion, and data encryption, are successfully implemented and tested.
