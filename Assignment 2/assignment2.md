@@ -1,5 +1,8 @@
 # 3-Layer Architecture
 
+## Feedback : need more background
+
+
 | Component | Part of the project |
 |---|---|
 | Application Layer | Online interface for users |
