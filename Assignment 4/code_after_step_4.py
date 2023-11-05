@@ -10,7 +10,7 @@ def enroll_in_courses(student: Student, courses: list[Course], max_skipped: int,
             else:
                 log_error(f"Cannot add course {student.get_student_nr()} for student {course.get_course_id()}")  # 7
                 return []
-        #  8
+        i += 1#  8
 
     schedule = student.get_schedule()  # 9
 
