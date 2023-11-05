@@ -1,4 +1,4 @@
-| Path (Set Builder Notation) | Input | Motivation |
+| Path | Input | Motivation |
 |-----------------------------|-------|------------|
 | {1, 2, 3, 4, 5, 6} | {'course.get_enrollment_starting_date() <= get_current_date()': True, 'student.has_paid_tuition()': True} | Enrollment date has passed and tuition is paid; tests normal course addition. |
 | {1, 2, 3, 4, 10, 11, 12} | {'course.get_enrollment_starting_date() <= get_current_date()': False, 'course.is_informational_course()': True} | Enrollment date not passed but informational course; should allow addition. |
