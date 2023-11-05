@@ -1,0 +1,19 @@
+## Cyclomatic Complexity
+CC = #(edges) - #(nodes) + 2 \
+CC = 36 - 28 + 2 = 10
+
+## Independent Paths
+The cyclomatic complexity is the upper bound of the amount of independent paths.
+
+| Path | Input | Motivation |
+| --- | --- | --- |
+| 1, 2, 3, 5, 7, 28 | courses = [Course] where the enrollment starting date of this course is in the future and the course is not informational | This will trigger all nodes in the path because it does not satisfy any of the 2 if-statements in the path |
+| 1, 9, 10, 24, 25, 27, 28 | courses = [] | When courses is empty, all while loops will be skipped |
+| 1, 2, 3, 4, 8, 1, 2, 3, 5, 7, 28 | courses = [Course1, Course2] where the enrollment starting date of Course1 has passed, the student has paid their tution or has financial aid, but the enrollment starting date of Course2 is in the future and Course2 is not an informational course | This input ensures the first while-loop is passed at least once. |
+| 1, 9, 10, 24, 25, 26, 25, 27, 28 | courses = [Course] | courses = [Course] where the enrollment starting date of this course has passed, the student has paid their tution or has financial aid and the student has enough credit for the course| Node 26 can only be reached when the requirements for Course are met. Note that the intented path is not equal to the actual path. The first 2 while loops are omitted here. |
+| 1, 2, 3, 5, 6, 8, 1, 2, 3, 5, 7, 28 | courses = [Course1, Course2] where the enrollment starting date of Course1 is in the future, Course1 is informational and the enrollment starting date of Course2 is in the future and Course2 is not informational | The first while-loop will accept the first course because it is informational but will reject the second course. |
+| 1, 9, 10, 11, 12, 13, 23, 10, 24, 25, 27, 28 | courses = [Course] where the enrollment starting date of this course has passed, the student has paid their tution or has financial aid and the student has got enough credit for the course, but the student does not meet the requirements to follow the course. | The input clearly makes sure the path goes to node 13. Once again the intended path is not equal to the actual path. |
+| 1, 9, 10, 11, 12, 14, 15, 17, 18, 19, 20, 24, 25, 27, 28 | courses = [Course] and max_skipped = 0 where the enrollment starting date of this course has passed, the student has paid their tution or has financial aid and the student has got enough credit for the course | This path simulates the correct enrollment, so the input needs to represent tha acceptance criteria (correct date, enough credit...) |
+| 1, 9, 10, 11, 12, 14, 16, 17, 21, 13, 10, 24, 25, 27, 28 | courses = [Course] where the enrollment starting date of this course has passed, the student has paid their tution or has financial aid and the student has not got enough credit for the course | This path simulates the scenario where the student does not have enough credits to follow a course |
+| 1, 9, 10, 11, 12, 14, 15, 17, 18, 19, 21, 23, 10, 24, 25, 27, 28 | courses = [Course] and max_skipped > 0 where the enrollment starting date of this course has passed, the student has paid their tution or has financial aid and the student has not got enough credit for the course | This path simulates the scenario where max_skipped is greater than the amount of courses where there is not enough credit |
+| 1, 9, 10, 11, 12, 14, 15, 17, 18, 19, 21, 22, 23, 10, 24, 25, 27, 28 | courses = [Course] and max_skipped = 0 where the enrollment starting date of this course has passed, the student has paid their tution or has financial aid and the student has not got enough credit for the course | This is the scenario where a student can join a course even though they have not enough credits |
