@@ -30,11 +30,13 @@ method Mult(a: int, b: int) returns (result: int)
 
     while(b_current > 0 || num_bits(b_current)-1 > 0)
         // TODO: invariant
-        invariant 0 < b_current <= b
-        invariant 0 < num_bits(b_current)-1 <= num_bits(b)-1
+        invariant b_current >= 0
+        invariant result + a_current * g * b_current == a * b
+
+
         // TODO: variant
-        decreases b_current
-        decreases num_bits(b_current)-1
+        decreases b_current, num_bits(b_current) - 1
+
     {
         result := result + a * g * (b_current % 2);
 
