@@ -28,7 +28,7 @@ method Mult(a: int, b: int) returns (result: int)
 
     var g := 1;
 
-    while(b_current > 0 || num_bits(b_current)-1 > 0)
+    while (b_current > 0 || num_bits(b_current)-1 > 0)
         // TODO: invariant
         invariant b_current >= 0
         invariant result + a_current * g * b_current == a * b
