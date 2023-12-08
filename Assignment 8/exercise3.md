@@ -12,8 +12,11 @@ Made m_paymentCost private in `Payment` and used a getter to get the value.
 ## move behaviour close to data
 Made a function pay inside of payment.
 
-## other refactoring
+## Other Refactoring
 Removed the OFFLINE statement as no code was executed in it.
 
 ## Other Refactoring
 Changed the if/else if statements to a switch statement.
+
+## Other refactoring
+Removed the unused variable `success` of `Payment::pay`

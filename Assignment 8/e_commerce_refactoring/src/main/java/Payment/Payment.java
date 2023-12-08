@@ -26,13 +26,13 @@ public class Payment {
 }
 
 	public boolean pay(ExternalPayments externalPayments) {
-		boolean success = true;
 		m_state = PaymentState.OPEN;
 		updatePaymentAmount(getPaymentCost());
 		switch (m_type) {
 			case "VISA":
 				if (externalPayments.visaPayment(this)) {
 					m_state = PaymentState.SUCCEED;
+					return true;
 				} else {
 					m_state = PaymentState.FAILED;
 				}
@@ -40,6 +40,7 @@ public class Payment {
 			case "MASTERCARD":
 				if (externalPayments.mastercardPayment(this)) {
 					m_state = PaymentState.SUCCEED;
+					return true;
 				} else {
 					m_state = PaymentState.FAILED;
 				}
@@ -47,11 +48,14 @@ public class Payment {
 			case "BANCONTACT":
 				if (externalPayments.bancontactPayment(this)) {
 					m_state = PaymentState.SUCCEED;
+					return true;
 				} else {
 					m_state = PaymentState.FAILED;
 				}
 				break;
 		}
+
+		return false;
 	}
 }
 
