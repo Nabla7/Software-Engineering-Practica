@@ -12,7 +12,6 @@ public class System {
 	private Clients m_clients;
 	
 	private HashMap<Integer, Cart> m_carts;
-	private HashMap<Integer, Client> m_logged_in_clients;
 	
 	public System() {
 		m_catalog = new Catalog();
@@ -46,11 +45,7 @@ public class System {
 	}
 	
 	public boolean login(int userID, String username, String password) {
-		Client client = m_clients.getRegisteredClient(username, password);
-		if (client == null)
-			return false;
-		m_logged_in_clients.put(userID, client);
-		return true;
+		return m_clients.login(userID, username, password)
 	}
 	
 	public void orderCart(int userID, Client client) {
@@ -58,6 +53,6 @@ public class System {
 	}
 	
 	public void orderCart(int userID) {
-		m_orders.addOrder(new Order(m_carts.get(userID), m_logged_in_clients.get(userID)));
+		m_orders.addOrder(new Order(m_carts.get(userID), clients.getLoggedInClients().get(userID)));
 	}
 }

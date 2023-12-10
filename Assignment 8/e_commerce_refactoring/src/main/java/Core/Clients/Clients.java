@@ -7,8 +7,9 @@ import java.util.HashMap;
  */
 public class Clients {
 	
-	HashMap<String, RegisteredClient> m_clients;
-	HashMap<Integer, Client> m_all_clients;
+	private HashMap<String, RegisteredClient> m_clients;
+	private HashMap<Integer, Client> m_all_clients;
+	private HashMap<Integer, Client> m_logged_in_clients;
 	
 	/**
 	 * Constructor
@@ -67,6 +68,18 @@ public class Clients {
 			System.out.println("Combination Username-Password does not occur in our database");
 			return null;
 		}
+	}
+
+	public boolean login(int userID, String username, String password) {
+		Client client = getRegisteredClient(username, password);
+		if (client == null)
+			return false;
+		m_logged_in_clients.put(userID, client);
+		return true;
+	}
+
+	public HashMap<Integer, Client> getLoggedInClients() {
+		return m_logged_in_clients
 	}
 	
 }
